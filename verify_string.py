@@ -12,9 +12,9 @@ from google.cloud import translate_v2
 import speech_recognition as sr
 
 #promt user for a word
-text = input("Write a word in English\n")
+text = input("Write a word in English:\n")
 #promt user to select a language
-language = input("Pick a language\nspanish\nthai\ngerman\nturkish\nchinese\njapanese\nkorean\narabic\n")
+language = input("\nPick a language\n\nspanish\nthai\ngerman\nturkish\nchinese\njapanese\nkorean\narabic\n\n")
 
 
 #transate function requires language in ISO code format 
@@ -71,14 +71,14 @@ def get_string(language_IETF):
     return transcribed_string
 
 translation = translate(text, language_ISO)
-print("'{0}'' in {1} is '{2}'".format(text, language, translation))
+print("\n'{0}'' in {1} is '{2}'".format(text, language, translation))
 
-print("Say '{0}'".format(translation))
+print("\nSay '{0}':\n".format(translation))
 target_string = get_string(language_IETF)
 
 if translate(text, language_ISO) == target_string:
-	print("Great job! You pronounced '{0}'' correctly in {1}".format(text, language))
+	print("Great job! You pronounced '{0}'' correctly in {1}\n".format(text, language))
 else:
-	print("You said '{0}'. We expected '{1}'".format(target_string, translation))
+	print("You said '{0}'. We expected '{1}'\n".format(target_string, translation))
 
 
