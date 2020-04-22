@@ -21,3 +21,7 @@ https://cloud.google.com/translate/docs/reference/libraries/v2/python
 
 more helppful documentation
 https://googleapis.dev/python/translation/latest/usage.html
+
+
+# Getting audio files in html5
+https://developers.google.com/web/fundamentals/media/recording-audio
